@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LogUserInRequest;
 use App\Http\Requests\StoreUserRequest;
 use App\Models\User;
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
