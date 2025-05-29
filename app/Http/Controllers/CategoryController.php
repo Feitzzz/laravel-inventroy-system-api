@@ -27,11 +27,7 @@ class CategoryController extends Controller
     public function updateCategory(UpdateCategoryRequest $request, Category $category)
     {
         $validatedData = $request->validated();
-
-        $category->update([
-            'name'        => $validatedData['name'],
-            'description' => $validatedData['description'],
-        ]);
+        $category->update($validatedData);
 
         return response()->json([
             'message'  => 'Category updated successfully',
